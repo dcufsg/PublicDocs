@@ -24,25 +24,25 @@ This present document is heavily indebted to a previous specification of the CB�
 
 It should be noted that the data structure outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the forthcoming Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as those provided by the Text Encoding Initiative (TEI), if required.  
 
-### Changes since
+### Changed understandings since developing the CBÉS data structure
 
 #### Developments in relation to the storage, retrieval and dissemination of image media
 The CBÉS data structure features
 ifmedia
 string replacement operations
 
-### Editorial tooling
-Ardán/LXLN
+#### Editorial tooling
+Editorial work for CBÉS was carried out the Léacslann editorial system previously developed by FSG. As was the case for CBÉG, however, it is proposed to annotate the CBÉ volumes in a newer editorial system, Ardán. While this is an application-level concern, and is thus outside the scope of this document, there is no doubt that the possibilites afforded by Ardán's more flexible data manipulation tools have influenced the data structure design.
 
-#### Additive metadata model
-either/or vs additive tagging (lang) (internal ed practices)
+#### Additive metadata models
+Various aspects of the CBÉS data structure preferred a boolean or either/or approach to certain metadata. For example, stories in CBÉS were marked as being either Irish-language, English-language, or mixed-language texts. In many cases such as this the CBÉ data structure will provide for an additive or tag-based approach where, for instance, one or many or no languages may be assigned to a given item in each volume. This is a function of both the wider scope of the CBÉ collection - which encompasses, to continue from the previous examples, some texts in Manx, Breton, and other languages, as well as non-linguistic materials - and evolving internal editorial practices.
 
 #### Additional metadata
 CBÉG Geonames etc.
 
 ### Overview of the CBÉ data structure
 
-The CBÉ collection consists of stories, accounts, diaries and other materials which have been physically bound into volumes. 
+The CBÉ collection consists of stories, accounts, questionnaires, diaries and other materials which have been physically bound into volumes. 
 
 Each volume can be subdivided into several chapters where each chapter pertains to a particular school, class and teacher. Chapters can further be subdivided into stories where each story is a self- contained unit of text written by a particular pupil (or, exceptionally, by the teacher himself or herself).
 
