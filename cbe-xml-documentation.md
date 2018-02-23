@@ -22,12 +22,13 @@ A similar process to digitise the NFC *Schools' Collection* (hereafter referred 
 
 This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol*, authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should not diverge signifc
 
-It should be noted that the data structure outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as those provided by the Text Encoding Initiative (TEI) if required.  
+It should be noted that the data structure outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the forthcoming Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as those provided by the Text Encoding Initiative (TEI), if required.  
 
 ### Changes since
 
 #### Developments in relation to the storage, retrieval and dissemination of image media
-The CBÉS data structure features 
+The CBÉS data structure features
+ifmedia
 string replacement operations
 
 ### Editorial tooling
