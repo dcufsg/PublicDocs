@@ -26,7 +26,8 @@ This present document is heavily indebted to a previous specification of the CB�
 ### Changes since
 images
 Ardán/LXLN
-either/or vs additive tagging (lang)
+either/or vs additive tagging (lang) (internal ed practices)
+CBÉG Geonames etc.
 
 
 ```xml
