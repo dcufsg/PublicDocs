@@ -4,9 +4,16 @@ The *Main Manuscript Collection* is one of five major collections of folklore he
 
 This collection is currently being digitsed as part of the Dúchas project by [Fiontar & Scoil na Gaeilge](http://www.dcu.ie/fiontar_scoilnagaeilge/) (FSG), Dublin City University, in conjunction with the NFC. The digitisation will produce (1) a collection of scanned images and (2) an XML data set that indexes and annotates the images. This document describes the data structure used in the XML data set.
 
+##### Table of Contents  
+[Introduction](#introduction)
+
 ## Introduction 
 
 A similar process to digitise the NFC *Schools' Collection* (hereafter referred to as CBÉS) and *Photographic Collection* (hereafter referred to as CBÉG) was previously undertaken during the period 2013–2017, also under the auspices of the Dúchas project. The results of this work have been made publically available at [www.duchas.ie](https://www.duchas.ie) and are in the process of being archived for preservation by the [UCD Digital Library](https://digital.ucd.ie/).
+
+This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol* authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) 
+
+### Changes since
 
 
 
