@@ -11,7 +11,7 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 1. [Introduction](#introduction)  
 2. [Volumes](#volumes)  
 3. [Pages](#pages)  
-4. [Parts](#units)  
+4. [Parts](#parts)  
 5. [Items](#items)  
 6. [Topics](#topics)  
 7. [Note types](#notetypes)  
