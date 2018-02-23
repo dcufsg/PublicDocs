@@ -8,19 +8,13 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 
 ##### Table of Contents  
 
-[1. Introduction](#introduction)
-
-[2. Volumes](#volumes)
-
-[3. Pages](#pages)
-
-[4. Units](#units)
-
-[5. Items](#items)
-
-[6. Topics](#topics)
-
-[7. Note types](#notetypes)
+1. [Introduction](#introduction)  
+2. [Volumes](#volumes)  
+3. [Pages](#pages)  
+4. [Units](#units)  
+5. [Items](#items)  
+6. [Topics](#topics)  
+7. [Note types](#notetypes)  
 
 ## Introduction 
 
