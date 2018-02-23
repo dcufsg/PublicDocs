@@ -11,7 +11,7 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 1. [Introduction](#introduction)  
 2. [Volumes](#volumes)  
 3. [Pages](#pages)  
-4. [Units](#units)  
+4. [Parts](#units)  
 5. [Items](#items)  
 6. [Topics](#topics)  
 7. [Note types](#notetypes)  
@@ -26,7 +26,7 @@ This present document is heavily indebted to a previous specification of the CB�
 ### Changes since
 images
 Ardán/LXLN
-
+either/or vs additive tagging (lang)
 
 
 ```xml
@@ -43,10 +43,12 @@ Ardán/LXLN
 
 (GA: *leathanach*)
 
-## Segments
+## Parts
 
 (GA: *cuid*)
+http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt parts
 
 ## Items
 
-(GA: *mír*)
+(GA: *mír*) entry, document, segment
+http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit
