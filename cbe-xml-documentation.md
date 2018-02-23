@@ -15,6 +15,8 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 5. [Items](#items)  
 6. [Topics](#topics)  
 7. [Note types](#notetypes)  
+8. [References to persons](#references-to-persons)
+9. [Interoperability with CBÉS](#interoperability-with-cbÉs)
 
 ## Introduction 
 
@@ -60,17 +62,21 @@ In addition to the physical and logical structure, several auxiliary record type
 
 Each entry in the data set consists of an ID number and an XML document of one of types mentioned above (`pVolume`, `lPart` etc). An element within an XML document may refer to another XML document with its ID number.
 
-The rest of this document describes each record type in detail.
+Each record type is described in detail below.
 
+### Relationships of inheritance within Volumes
+
+will not be explicitly defined within the data structure
+and will be addressed as an application-level concern
+
+
+## Volumes
 
 ```xml
 <pVolume>
   <volumeNumber/>
 </pVolume>
 ```
-
-## Volumes
-
 
 
 ## Pages
@@ -80,8 +86,13 @@ The rest of this document describes each record type in detail.
 ## Parts
 
 
-http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt parts
 
 ## Items
 
-http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit
+
+
+## References to persons
+
+
+
+## Interoperability with CBÉS
