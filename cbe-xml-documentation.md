@@ -22,11 +22,15 @@ A similar process to digitise the NFC *Schools' Collection* (hereafter referred 
 
 This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol* authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should not diverge signifc
 
+It should be noted that the data structured outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publically available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as those provided by the Text Encoding Initiative (TEI) if required.  
+
 ### Changes since
 
 #### Developments in relation to the storage, retrieval and dissemination of image media
 The CBÉS data structure features 
+string replacement operations
 
+### Editorial tooling
 Ardán/LXLN
 
 #### Additive metadata model
@@ -46,7 +50,7 @@ Each volume is represented in the data set by a `pVolume` (GA: *imleabhar*) reco
 Together, `pVolume` and `pPage` records represent the collection’s **physical structure** (hence the prefix `p`). In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `lPart` records and `lItem` records (notice the prefix `l`).
 
 An `lPart` (GA: *cuid*) record represents a chapter. It is consonant with the [msPart](
-http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the Text Encoding Initiative (TEI) P5 Guidelines. It contains a reference to a pVolume record to tell you which volume the chapter is in, and a reference to a `pPage` record within that volume that represents the chapter’s title page. An `lPart` record also contains data about the school from which originates, its geographical location, the name of the teacher who compiled the chapter, and so on.
+http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the TEI P5 Guidelines. It contains a reference to a pVolume record to tell you which volume the chapter is in, and a reference to a `pPage` record within that volume that represents the chapter’s title page. An `lPart` record also contains data about the school from which originates, its geographical location, the name of the teacher who compiled the chapter, and so on.
 
 An `lItem` (GA: *mír*) record represents a story. It is consonant with the TEI [msItem](
 http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. It contains a reference to its parent `lPart` record and to one or more `pPage` records. Notice that mapping between stories and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An `lItem` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
