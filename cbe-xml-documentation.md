@@ -34,3 +34,19 @@ Ardán/LXLN
   <volumeNumber/>
 </pVolume>
 ```
+
+## Volumes
+
+(GA: *imleabhar*)
+
+## Pages
+
+(GA: *leathanach*)
+
+## Segments
+
+(GA: *cuid*)
+
+## Items
+
+(GA: *mír*)
