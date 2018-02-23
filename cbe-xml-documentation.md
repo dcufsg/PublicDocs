@@ -6,7 +6,7 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 
 **Note:** This documentation is a work in progress and should be treated as such.
 
-##### Table of Contents  
+## Table of Contents  
 
 1. [Introduction](#introduction)  
 2. [Volumes](#volumes)  
@@ -22,8 +22,24 @@ A similar process to digitise the NFC *Schools' Collection* (hereafter referred 
 
 This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol* authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should not diverge signifc
 
+### Changes since
 
-The contents of CBÉ consist of stories, accounts, diaries and other materials which have been physically bound into volumes. Each volume can be subdivided into several chapters where each chapter pertains to a particular school, class and teacher. Chapters can further be subdivided into stories where each story is a self- contained unit of text written by a particular pupil (or, exceptionally, by the teacher himself or herself).
+#### Developments in relation to image storage, retrieval and dissemination
+The CBÉS data structure features 
+
+Ardán/LXLN
+
+#### Tagging
+either/or vs additive tagging (lang) (internal ed practices)
+
+#### Additional metadata
+CBÉG Geonames etc.
+
+### Overview of the CBÉ data structure
+
+The CBÉ collection consists of stories, accounts, diaries and other materials which have been physically bound into volumes. 
+
+Each volume can be subdivided into several chapters where each chapter pertains to a particular school, class and teacher. Chapters can further be subdivided into stories where each story is a self- contained unit of text written by a particular pupil (or, exceptionally, by the teacher himself or herself).
 
 Each volume is represented in the data set by a `pVolume` record, and each page by a `pPage` record. Each `pPage` record contains a reference to a `pVolume` record to tell you which volume the page is in. Each `pPage` record also contains a reference that identifies scanned images of the page.
 
@@ -38,12 +54,6 @@ In addition to the physical and logical structure, several auxiliary record type
 Each entry in the data set consists of an ID number and an XML document of one of types mentioned above (`pVolume`, `lPart` etc). An element within an XML document may refer to another XML document with its ID number.
 
 The rest of this document describes each record type in detail.
-
-### Changes since
-images
-Ardán/LXLN
-either/or vs additive tagging (lang) (internal ed practices)
-CBÉG Geonames etc.
 
 
 ```xml
