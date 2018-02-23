@@ -23,18 +23,20 @@ A similar process to digitise the NFC *Schools' Collection* (hereafter referred 
 This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol* authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should not diverge signifc
 
 
-When Bailiúchán na Scol was created, pupils and teachers in schools across the country were asked to collect folklore in the form of written essays. The essays have been bound into volumes. Each volume can be subdivided into several chapters where each chapter pertains to a particular school, class and teacher. Chapters can further be subdivided into stories where each story is a self- contained unit of text written by a particular pupil (or, exceptionally, by the teacher himself or herself).
+The contents of CBÉ consist of stories, accounts, diaries and other materials which have been physically bound into volumes. Each volume can be subdivided into several chapters where each chapter pertains to a particular school, class and teacher. Chapters can further be subdivided into stories where each story is a self- contained unit of text written by a particular pupil (or, exceptionally, by the teacher himself or herself).
 
-Each volume is represented in the data set by a pVolume record, and each page by a pPage record. Each pPage record contains a reference to a pVolume record to tell you which volume the page is in. Each pPage record also contains two URLs that point to scanned images of the page (a low- resolution one and a high-resolution one).
+Each volume is represented in the data set by a `pVolume` record, and each page by a `pPage` record. Each `pPage` record contains a reference to a `pVolume` record to tell you which volume the page is in. Each `pPage` record also contains a reference that identifies scanned images of the page.
 
-Together, pVolume and pPage records represent the collection’s physical structure (hence the prefix p). In parallel to the physical structure, a logical structure exists which annotates and indexes the physical structure. It consists of lChapter records and lStory records (notice the prefix l).
+Together, `pVolume` and `pPage` records represent the collection’s **physical structure** (hence the prefix `p`). In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `lPart` records and `lItem` records (notice the prefix `l`).
 
-An lChapter record represents a chapter. It contains a reference to a pVolume record to tell you which volume the chapter is in, and a reference to a pPage record within that volume that represents the chapter’s title page. An lChapter record also contains data about the school from which originates, its geographical location, the name of the teacher who compiled the chapter, and so on.
+An `lPart` record represents a chapter. It contains a reference to a pVolume record to tell you which volume the chapter is in, and a reference to a pPage record within that volume that represents the chapter’s title page. An `lPart` record also contains data about the school from which originates, its geographical location, the name of the teacher who compiled the chapter, and so on.
 
-An lStory record represents a story. It contains a reference to its parent lChapter record and to one or more pPage records. Notice that mapping between stories and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An lStory record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
+An `lItem` record represents a story. It contains a reference to its parent `lPart` record and to one or more `pPage` records. Notice that mapping between stories and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An `lItem` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
+
 In addition to the physical and logical structure, several auxiliary record types exist in the data set which serve as look-up lists. These include topic records and noteType records. Their names do not have a prefix.
 
-Each entry in the data set consists of an ID number and an XML document of one of types mentioned above (pVolume, lChapter etc). An element within an XML document may refer to another XML document with its ID number.
+Each entry in the data set consists of an ID number and an XML document of one of types mentioned above (`pVolume`, `lPart` etc). An element within an XML document may refer to another XML document with its ID number.
+
 The rest of this document describes each record type in detail.
 
 ### Changes since
