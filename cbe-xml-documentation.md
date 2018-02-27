@@ -76,6 +76,7 @@ and will be addressed as an application-level concern
 <pVolume>
   <status>3</status>
   <volumeNumber>0109</volumeNumber>
+  <notes></notes>
 </pVolume>
 ```
 
@@ -89,6 +90,7 @@ and will be addressed as an application-level concern
   <volume default="4344035" id="4" />
   <pageNumber default="209" id="5" />
   <listingOrder default="209" id="6" />
+  <notes></notes>
 </pPage>
 ```
 
@@ -109,6 +111,7 @@ and will be addressed as an application-level concern
   <collectors>
     <person>80607834</person>
   </collectors>
+  <notes></notes>
 </lPart>
 ```
 
@@ -138,6 +141,12 @@ and will be addressed as an application-level concern
     <person>80607834</person>
     <person>80607834</person>
   </informant>
+  <relevantPerson>
+    <person>80607834</person>
+  </relevantPerson>
+  <condition>
+    <conditionDesc>2</conditionDesc>
+  </condition>
   <notes></notes>
 </lItem>
 ```
@@ -166,6 +175,7 @@ and will be addressed as an application-level concern
   <occupation></occupation>
   <viaf>1740563</viaf>
   <bio>1714</bio>
+  <notes></notes>
 </person>
 ```
 
