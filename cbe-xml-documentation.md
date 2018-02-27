@@ -73,8 +73,9 @@ and will be addressed as an application-level concern
 ## Volumes
 
 ```xml
-<pVolume id="1" status="3">
-  <volumeNumber default="0109" id="2" />
+<pVolume>
+  <status>3</status>
+  <volumeNumber>0109</volumeNumber>
 </pVolume>
 ```
 
@@ -82,7 +83,7 @@ and will be addressed as an application-level concern
 ## Pages
 
 ```xml
-<pPage id="1">
+<pPage>
   <fileNameBig default="CBES_0085\CBES_0085_209.jpg" id="2" />
   <fileNameSmall default="CBES_0085\CBES_0085_209_t.jpg" id="3" />
   <volume default="4344035" id="4" />
@@ -94,20 +95,28 @@ and will be addressed as an application-level concern
 ## Parts
 
 ```xml
-<lChapter id="1">
+<lPart>
   <volume default="4360513" listingOrder="2" id="2" />
-  <page default="4360522" id="6" />
-  <schoolLocation default="4335656" id="3" />
-  <schoolName default="Caiseal" id="4" />
-  <teacherName pretext="Pádraig Mac" text="Mághnuis" id="5" />
-  <schoolRollNumber default="16085" id="7" />
-</lChapter>
+  <page>4360522</page>
+  <locationIreland>
+    <county>100001</county>
+    <georefIreland>100001</georefIreland>
+  </locationIreland>
+  <locationAbroad>
+    <country>BE</country>
+    <georefAbroad>2784804</georefAbroad>
+  </locationAbroad>
+  <collectors>
+    <person>80607834</person>
+  </collectors>
+</lPart>
 ```
 
 
 ## Items
 ```xml
-<lStory id="1" status="80">
+<lItem>
+  <status>3</status>
   <chapter default="4427865" id="2" listingOrder="19" />
   <page default="4351818" id="3" />
   <title default="Scéal" id="4" date="1938-04-26" />
@@ -124,12 +133,35 @@ and will be addressed as an application-level concern
     <age default="" id="14" />
     <occupation default="" id="15" />
   </informant>
-</lStory>
+</lItem>
 ```
 
 
 ## References to persons
 
+```xml
+<person>
+  <name>Seán <surname>Ó hEochaidh</surname></name>
+  <gender>m</gender>
+  <birthDate>
+    <date>
+      <year>1913</year>
+      <month>02</month>
+      <day>09</day>
+    </date>
+  </birthDate>
+  <deathDate>
+    <date>
+      <year>2002</year>
+      <month>01</month>
+      <day>18</day>
+    </date>
+  </deathDate>
+  <occupation></occupation>
+  <viaf>1740563</viaf>
+  <bio>1714</bio>
+</person>
+```
 
 
 ## Interoperability with CBÉS
