@@ -129,8 +129,10 @@ and will be addressed as an application-level concern
   <chapter id="4427865">
     <listingOrder>19</listingOrder>
   </chapter>
-  <page>4595710</page>
-  <page>4595711</page>
+  <pages>
+    <page id="4360522" />
+    <page id="4360523" />
+  </pages>
   <itemDescription>1</itemDescription>
   <title>Scéal</title>
   <date>
