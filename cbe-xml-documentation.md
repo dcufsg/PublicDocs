@@ -117,22 +117,28 @@ and will be addressed as an application-level concern
 ```xml
 <lItem>
   <status>3</status>
-  <chapter default="4427865" id="2" listingOrder="19" />
-  <page default="4351818" id="3" />
-  <title default="Scéal" id="4" date="1938-04-26" />
-  <language default="ga" id="5" />
-  <topic default="4427780" id="0" />
-  <collector id="7">
-    <persName id="8" pretext="Seaghán Ó" text="Teadair" />
-    <gender default="mal" id="9" />
-    <age default="" id="10" />
-  </collector>
-  <informant id="11" relation="">
-    <persName id="12" pretext="Bean Uí" text="Teadair" />
-    <gender default="fem" id="13" />
-    <age default="" id="14" />
-    <occupation default="" id="15" />
+  <chapter id="4427865">
+    <listingOrder>19</listingOrder>
+  </chapter>
+  <page>3</page>
+  <title>Scéal</title>
+  <date>
+    <year>2002</year>
+    <month>01</month>
+    <day>18</day>
+  </date>
+  <languages>
+    <language>ga</language>
+  </languages>
+  <topics></topics>
+  <collectors>
+    <person>80607834</person>
+  </collectors>
+  <informants>
+    <person>80607834</person>
+    <person>80607834</person>
   </informant>
+  <notes></notes>
 </lItem>
 ```
 
@@ -144,7 +150,7 @@ and will be addressed as an application-level concern
   <name>Seán <surname>Ó hEochaidh</surname></name>
   <gender>m</gender>
   <birthDate>
-    <date>
+    <date qualifier="INFER">
       <year>1913</year>
       <month>02</month>
       <day>09</day>
