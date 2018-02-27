@@ -91,6 +91,9 @@ and will be addressed as an application-level concern
   <volume id="4344035" />
   <pageNumber>209</pageNumber>
   <listingOrder>209</listingOrder>
+  <condition>
+    <conditionDesc>2</conditionDesc>
+  </condition>
   <notes></notes>
 </pPage>
 ```
@@ -127,6 +130,7 @@ and will be addressed as an application-level concern
     <listingOrder>19</listingOrder>
   </chapter>
   <page>3</page>
+  <itemDescription>1</itemDescription>
   <title>Scéal</title>
   <date>
     <year>2002</year>
@@ -147,9 +151,6 @@ and will be addressed as an application-level concern
   <relevantPerson>
     <person>80607834</person>
   </relevantPerson>
-  <condition>
-    <conditionDesc>2</conditionDesc>
-  </condition>
   <notes></notes>
 </lItem>
 ```
