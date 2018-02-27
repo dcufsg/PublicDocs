@@ -85,11 +85,12 @@ and will be addressed as an application-level concern
 
 ```xml
 <pPage>
-  <fileNameBig default="CBES_0085\CBES_0085_209.jpg" id="2" />
-  <fileNameSmall default="CBES_0085\CBES_0085_209_t.jpg" id="3" />
-  <volume default="4344035" id="4" />
-  <pageNumber default="209" id="5" />
-  <listingOrder default="209" id="6" />
+  <image>
+    <fileName>CBES_0085\CBES_0085_209.jpg</fileName>
+  </image>
+  <volume id="4344035" />
+  <pageNumber>209</pageNumber>
+  <listingOrder>209</listingOrder>
   <notes></notes>
 </pPage>
 ```
@@ -98,8 +99,10 @@ and will be addressed as an application-level concern
 
 ```xml
 <lPart>
-  <volume default="4360513" listingOrder="2" id="2" />
-  <page>4360522</page>
+  <volume id="4360513">
+    <listingOrder>2</listingOrder>
+  </volume>
+  <page id="4360522" />
   <locationIreland>
     <county>100001</county>
     <georefIreland>100001</georefIreland>
