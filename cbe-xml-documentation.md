@@ -73,22 +73,59 @@ and will be addressed as an application-level concern
 ## Volumes
 
 ```xml
-<pVolume>
-  <volumeNumber/>
+<pVolume id="1" status="3">
+  <volumeNumber default="0109" id="2" />
 </pVolume>
 ```
 
 
 ## Pages
 
-
+```xml
+<pPage id="1">
+  <fileNameBig default="CBES_0085\CBES_0085_209.jpg" id="2" />
+  <fileNameSmall default="CBES_0085\CBES_0085_209_t.jpg" id="3" />
+  <volume default="4344035" id="4" />
+  <pageNumber default="209" id="5" />
+  <listingOrder default="209" id="6" />
+</pPage>
+```
 
 ## Parts
 
+```xml
+<lChapter id="1">
+  <volume default="4360513" listingOrder="2" id="2" />
+  <page default="4360522" id="6" />
+  <schoolLocation default="4335656" id="3" />
+  <schoolName default="Caiseal" id="4" />
+  <teacherName pretext="Pádraig Mac" text="Mághnuis" id="5" />
+  <schoolRollNumber default="16085" id="7" />
+</lChapter>
+```
 
 
 ## Items
-
+```xml
+<lStory id="1" status="80">
+  <chapter default="4427865" id="2" listingOrder="19" />
+  <page default="4351818" id="3" />
+  <title default="Scéal" id="4" date="1938-04-26" />
+  <language default="ga" id="5" />
+  <topic default="4427780" id="0" />
+  <collector id="7">
+    <persName id="8" pretext="Seaghán Ó" text="Teadair" />
+    <gender default="mal" id="9" />
+    <age default="" id="10" />
+  </collector>
+  <informant id="11" relation="">
+    <persName id="12" pretext="Bean Uí" text="Teadair" />
+    <gender default="fem" id="13" />
+    <age default="" id="14" />
+    <occupation default="" id="15" />
+  </informant>
+</lStory>
+```
 
 
 ## References to persons
