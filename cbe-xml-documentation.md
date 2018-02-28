@@ -25,14 +25,24 @@ A similar process to digitise the NFC *Schools' Collection* (hereafter referred 
 
 This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol*, authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should not diverge signifc
 
-It should be noted that the data structure outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the forthcoming Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as those provided by the Text Encoding Initiative (TEI), if required.  
+It should be noted that the data structure outlined below represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the forthcoming Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications such as the Metadata Object Description Schema (MODS) or those provided by the Text Encoding Initiative (TEI), if required.  
 
 ### Changed understandings since developing the CBÉS data structure
 
 #### Developments in relation to the storage, retrieval and dissemination of image media
-The CBÉS data structure features
-ifmedia
-string replacement operations
+The CBÉS data structure references individual image files where each page in a volume is associated with an image:
+
+```xml
+<fileNameBig default="CBES_0085\CBES_0085_1A.jpg" />
+<fileNameSmall default="CBES_0085\CBES_0085_1A_t.jpg" />
+```
+
+This convention may no longer be optimal for the following reasons:
+
+- Images need to be served at a flexible range of sizes. Since September 2017, the dúchas.ie website features a responsive design and it is intended to add to the range of image sizes served in order to better cater for a wide range of user devices. The number and variety of images offered is likely to change over time.
+- With [IIIF media standards](http://iiif.io/) and server technology coming on stream, it may soon no longer be necessary or desirable to retain multiple static copies of images in local storage.
+
+Instead, it is proposed that the XML code for CBÉ will reference a single authoritative image file. Paths to derivate images can be constructed at the application level using string replacement operations.
 
 #### Editorial tooling
 Editorial work for CBÉS was carried out the Léacslann editorial system previously developed by FSG. As was the case for CBÉG, however, it is proposed to annotate the CBÉ volumes in a newer editorial system, Ardán. While this is an application-level concern, and is thus outside the scope of this document, there is no doubt that the possibilites afforded by Ardán's more flexible data manipulation tools have influenced the data structure design.
