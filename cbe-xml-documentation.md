@@ -17,13 +17,13 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 7. [Note types](#notetypes)  
 8. [References to persons](#references-to-persons)
 9. [Dates](#dates)
-10. [Interoperability with CBÉS](#interoperability-with-cbÉs)
+10. [Consistency with CBÉS data structure](#consistency-with-cbÉs-data-structure)
 
 ## Introduction 
 
 A similar process to digitise the NFC *Schools' Collection* (hereafter referred to as CBÉS) and *Photographic Collection* (hereafter referred to as CBÉG) was previously undertaken during the period 2013–2017, also under the auspices of the Dúchas project. The results of this work have been made publicly available at [www.duchas.ie](https://www.duchas.ie) and are in the process of being archived for preservation by the [UCD Digital Library](https://digital.ucd.ie/).
 
-This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol*, authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: it is proposed that the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) should be largely consistent with that of CBÉS, primary so that both collections may be accomodated within the same editorial interface in the near future (see [Interoperability with CBÉS](#interoperability-with-cbÉs) below).
+This present document is heavily indebted to a previous specification of the CBÉS data structure, *The Data Structure of Bailiúchán na Scol*, authored by [Michal Boleslav Měchura](http://www.lexiconista.com) in 2013. There is good reason for this: the data structure of the *Main Manuscript Collection* (hereafter referred to as CBÉ) will be, to a large extent, a more generalised adaptation of the CBÉS data structure. This will aid future developments as part of the Dúchas project (see [Consistency with CBÉS data structure](#consistency-with-cbÉs-data-structure) below).
 
 It should be noted that the data structure outlined in this document represents the internal data structure for the CBÉ database and not an authoritative schema for encoding folkloristic or archival data. Not all elements of the CBÉ data structure will be made publicly available and the data may be variously restructured or transformed for presentation on the dúchas.ie website or for dissemination via the forthcoming Dúchas application programming interface (API). It should also be possible to reconstruct the data according to other specifications, such as the Metadata Object Description Schema (MODS) or those provided by the Text Encoding Initiative (TEI), as required.  
 
@@ -221,7 +221,7 @@ Dates may be referenced within the CBÉ data structure for several reasons. To a
 
 ### Known dates
 
-```
+```xml
 <date>
   <year>2002</year>
   <month>01</month>
@@ -308,4 +308,8 @@ Represents a person.
 | `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<notes>`       | none or one or more | Any editorial notes |
 
-## Interoperability with CBÉS
+## Consistency with CBÉS data structure
+
+Editorial work on the CBÉS collection is currently carried out using FSG's Léacslann platform, which is nearing end
+
+a more generalised version of the CBÉS data structure
