@@ -77,6 +77,10 @@ In many cases where, for example, all of the parts in a volume were collected in
 
 ## Volumes
 
+### Example
+
+Entry ID 231579
+
 ```xml
 <pVolume>
   <status>3</status>
@@ -84,6 +88,18 @@ In many cases where, for example, all of the parts in a volume were collected in
   <notes></notes>
 </pVolume>
 ```
+
+### `<pVolume>`
+
+Represents a volume.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------| ------|
+| `<status>`    | exactly one   | $1600 |
+| `<volumeNumber>`     | centered      |   $12 |
+| `<notes>` | are neat      |    $1 |
 
 
 ## Pages
