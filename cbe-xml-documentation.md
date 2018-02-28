@@ -217,12 +217,32 @@ Entry ID 551579
 
 ## Dates
 
+Dates may be referenced within the CBÉ data structure for several reasons. To allow the greatest flexibility, the `<date>` element provides for a number of different scenarios.
+
+### Known dates
+
+```
+<date>
+  <year>2002</year>
+  <month>01</month>
+  <day>18</day>
+</date>
+```
+
+Known dates may include as few as one element (`<year>`) and as many as three elements.
+
+### Qualified dates
+
 ```xml
 <date qualifier="INFER">
   <month>02</month>
   <day>09</day>
 </date>
 ```
+
+The `@qualifier` attribute will accept a range of values consistent with the [date qualifiers specified in MODS v3](https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list). These are `APPROX` (a date that may not be exact), `INFER` (the date has not been transcribed directly from a resource, but is a reasonable assumption), and `QUESTION`(the date is questionable).
+
+### Periods of time
 
 ```xml
 <date>
@@ -234,14 +254,13 @@ Entry ID 551579
   </endDate>
 </date>
 ```
-
-https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consistent with date qualifiers as specified in the Metadata Open Description Schema (MODS) version 3. 
+This can be used to demarcate a span of time and all standard `<date>` child elements for days, months and years are permitted.
 
 ## References to persons
 
 Persons named within the CBÉ metadata will be identified by reference to objects in the *Persons Database* (hereafter CBÉD). Given that many persons appear in several NFC collections - some photographers in CBÉG are also collectors in CBÉ, for example - objects in CBÉD serve as a single source of truth for personal metadata across the entire data set. Persons in CBÉ metadata are referenced by their CBÉD ID, stored in a `<person>` element.
 
-The CBÉD data structure will be extended to account for the following data structure.
+The CBÉD data structure will be expanded to account for the following elements.
 
 ### Example
 
@@ -280,7 +299,7 @@ Represents a person.
 
 | Name            | Cardinality   | Description  |
 | ----------------|---------------|--------------|
-| `<name>`        | one or more   | The person's full name |
+| `<name>`        | one or more   | The person's full name. The first name in the tree will taken as the person's authoritative name |
 | `<gender>`      | exactly one   | The person's gender    |
 | `<birthDate>`   | exactly one   | The person's date of birth |
 | `<deathDate>`   | exactly one   | The person's date of death |
