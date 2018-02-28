@@ -85,7 +85,6 @@ Entry ID 231579
 <pVolume>
   <status>3</status>
   <volumeNumber>0109</volumeNumber>
-  <notes></notes>
 </pVolume>
 ```
 
@@ -134,7 +133,7 @@ Entry ID 4667213
   <volume id="4360513">
     <listingOrder>2</listingOrder>
   </volume>
-  <page id="4360522" />
+  <page id="4360522"></page>
   <locationIreland>
     <county>100001</county>
     <georefIreland>100001</georefIreland>
@@ -148,7 +147,8 @@ Entry ID 4667213
   </collectors>
   <relevantPublications>
     <publication doi="10.2307/20521241">
-      Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." <title>Béaloideas</title> 24 (1955): Ii-133.
+      Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." 
+      <title>Béaloideas</title> 24 (1955): Ii-133.
     </publication>
   </relevantPublications>
   <notes></notes>
@@ -164,15 +164,14 @@ Entry ID 551579
 
 ```xml
 <lItem>
-  <title>Scéal</title>
-  <status>3</status>
-  <chapter id="4427865">
+  <part id="4427865">
     <listingOrder>19</listingOrder>
-  </chapter>
+  </part>
   <pages>
     <page id="4360522" />
     <page id="4360523" />
   </pages>
+  <title>Scéal</title>
   <date>
     <year>2002</year>
     <month>01</month>
@@ -214,6 +213,32 @@ Entry ID 551579
   <notes></notes>
 </lItem>
 ```
+
+## Topics
+
+Topics metadata is not currently specified as part of the CBÉ data structure. Work is under way to develop the most efficient system to integrate the different topic taxonomies available with the CBÉ data set. It is proposed that CBÉ items will annotated with topics on a second editorial pass.
+
+## Note types
+
+### Example
+
+```xml
+<noteTypes>
+  <noteType code="ÁBHAR" title="Ceist faoin ábhar" />
+</noteTypes>
+```
+
+### `<noteType>`
+
+Represents a note type.
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@code`         | required      | string       | The internal system code associated with this note type |
+| `@title`        | required      | string       | The user-friendly title ascribed to this note type |
+
 
 ## Dates
 
