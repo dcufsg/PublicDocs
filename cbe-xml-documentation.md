@@ -73,8 +73,7 @@ Each record type is described in detail below.
 
 ### Relationships of inheritance within volumes
 
-In many cases where, for example, all of the parts in a volume were collected in a single location or many of the items in a manuscript part were obtained by the same collector, it may be beneficial to allow `lPart` or `lItem` records to 'inherit' properties from the volume or part metadata. Such a facility may be an aid to the progress of the editorial annotation work.
-Relationships of inheritance, as such, will not be explicitly defined within the data structure (i.e. by means of elements that explicitly define an 'Item X inherits collector properties from Volume Y'-type relationship. Rather, they will be facilitated within the editorial tooling as an application-level concern.
+In many cases where, for example, all of the parts in a volume were collected in a single location or many of the items in a manuscript part were obtained by the same collector, it may be beneficial to allow `lPart` or `lItem` records to 'inherit' certain metadata from the volume or part, respectively, to which they belong. Such a facility may be an aid to the progress of the editorial annotation work. Relationships of inheritance, as such, will not be explicitly defined within the data structure (i.e. by means of elements that explicitly define an 'Item X inherits collector properties from Volume Y'-type relationship. Rather, they will be facilitated within the editorial tooling as an application-level concern.
 
 ## Volumes
 
