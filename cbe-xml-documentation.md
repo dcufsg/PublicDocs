@@ -260,7 +260,7 @@ This can be used to demarcate a span of time and all standard `<date>` child ele
 
 Persons named within the CBÉ metadata will be identified by reference to objects in the *Persons Database* (hereafter CBÉD). Given that many persons appear in several NFC collections - some photographers in CBÉG are also collectors in CBÉ, for example - objects in CBÉD serve as a single source of truth for personal metadata across the entire data set. Persons in CBÉ metadata are referenced by their CBÉD ID, stored in a `<person>` element.
 
-The CBÉD data structure will be expanded to account for the following elements.
+The CBÉD data structure will be expanded to account for the elements described below.
 
 ### Example
 
@@ -310,6 +310,9 @@ Represents a person.
 
 ## Consistency with CBÉS data structure
 
-Editorial work on the CBÉS collection is currently carried out using FSG's Léacslann platform, which is nearing end
+As stated previously, the CBÉ data structure was designed as a generalised version of the earlier CBÉS data structure. There are two primary reasons for this:
 
-a more generalised version of the CBÉS data structure
+- It is proposed to move the CBÉS collection from FSG's older editorial platform, Léacslann, to our most up-to-date system, Ardán. A consistent data structure between both collections means they can share the same editorial interface.
+- A consistent data structure for CBÉ and CBÉS reduces complexity and makes it easier to provide and maintain facilities such as the forthcoming Dúchas API.
+
+It may indeed be possible to programmatically transform the CBÉS XML structure so that it is fully uniform with the generalised CBÉ structure. For example, CBÉS-specific elements such as `<teacherName>` might be mapped onto general CBÉ elements such as `<collector type="teacher">`. Thus, complexity at the application level could be greatly reduced.
