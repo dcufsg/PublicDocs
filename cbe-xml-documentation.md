@@ -264,7 +264,7 @@ The CBÉD data structure will be extended to account for the following data stru
     </date>
   </deathDate>
   <occupations>
-    <occupation></occupation>
+    <occupation id="22"></occupation>
   </occupations>
   <viaf>1740563</viaf>
   <bio>1714</bio>
@@ -285,7 +285,7 @@ Represents a person.
 | `<birthDate>`   | exactly one   | The person's date of birth |
 | `<deathDate>`   | exactly one   | The person's date of death |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
-| `<viaf>`        | none or one   | The person's [Virtual Internation File Authority](http://viaf.org/) ID |
+| `<viaf>`        | none or one   | The person's [Virtual International File Authority](http://viaf.org/) ID |
 | `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<notes>`       | none or one or more | Any editorial notes |
 
