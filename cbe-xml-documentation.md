@@ -118,6 +118,11 @@ and will be addressed as an application-level concern
   <collectors>
     <person>80607834</person>
   </collectors>
+  <relevantPublications>
+    <publication doi="10.2307/20521241">
+      Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." <title>Béaloideas</title> 24 (1955): Ii-133.
+    </publication>
+  </relevantPublications>
   <notes></notes>
 </lPart>
 ```
@@ -165,6 +170,9 @@ and will be addressed as an application-level concern
     <text lang="ga"></text>
     <text lang="en"></text>
   </extraInfo>
+  <relevantCollections>
+    <collection id="cbeg"></collection>
+  </relevantCollections>
   <relevantPublications>
     <publication doi="10.2307/20521241">
       Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." <title>Béaloideas</title> 24 (1955): Ii-133.
