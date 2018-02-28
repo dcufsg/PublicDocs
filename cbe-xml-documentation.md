@@ -126,6 +126,7 @@ and will be addressed as an application-level concern
 ## Items
 ```xml
 <lItem>
+  <title>Scéal</title>
   <status>3</status>
   <chapter id="4427865">
     <listingOrder>19</listingOrder>
@@ -134,8 +135,12 @@ and will be addressed as an application-level concern
     <page id="4360522" />
     <page id="4360523" />
   </pages>
-  <itemDescription>1</itemDescription>
-  <title>Scéal</title>
+  <itemDescription type="0">
+    <script>0</script>
+    <subItem>
+      <itemDescription type="2"></itemDescription> 
+    <subItem>
+  </itemDescription>
   <date>
     <year>2002</year>
     <month>01</month>
@@ -155,6 +160,15 @@ and will be addressed as an application-level concern
   <relevantPerson>
     <person>80607834</person>
   </relevantPerson>
+  <extraInfo status="EDIT">
+    <text lang="ga"></text>
+    <text lang="en"></text>
+  </extraInfo>
+  <relevantPublications>
+    <publication doi="10.2307/20521241">
+      Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." <title>Béaloideas</title> 24 (1955): Ii-133.
+    </publication>
+  </relevantPublications>
   <notes></notes>
 </lItem>
 ```
@@ -162,6 +176,8 @@ and will be addressed as an application-level concern
 ## Dates
 ```xml
 ```
+
+https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consistent with date qualifiers as specified in the Metadata Open Description Schema (MODS) version 3. 
 
 ## References to persons
 
