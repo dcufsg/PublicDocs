@@ -63,10 +63,10 @@ Each volume is represented in the data set by a `pVolume` (GA: *imleabhar*) reco
 
 Together, `pVolume` and `pPage` records represent the collection’s **physical structure** (hence the prefix `p`). In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `lPart` records and `lItem` records (notice the prefix `l`).
 
-An `lPart` (GA: *cuid*) record represents a chapter. It is consonant with the [msPart](
+An `lPart` (GA: *cuid*) record represents a chapter. It is consonant with the [`msPart`](
 http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the TEI P5 Guidelines. It contains a reference to a pVolume record to tell you which volume the chapter is in, and a reference to a `pPage` record within that volume that represents the chapter’s title page. An `lPart` record also contains data about the school from which originates, its geographical location, the name of the teacher who compiled the chapter, and so on.
 
-An `lItem` (GA: *mír*) record represents a story. It is consonant with the TEI [msItem](
+An `lItem` (GA: *mír*) record represents a story. It is consonant with the TEI [`msItem`](
 http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. It contains a reference to its parent `lPart` record and to one or more `pPage` records. Notice that mapping between stories and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An `lItem` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
 
 In addition to the physical and logical structure, several auxiliary record types exist in the data set which serve as look-up lists. These include topic records and noteType records. Their names do not have a prefix.
