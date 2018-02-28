@@ -175,6 +175,21 @@ and will be addressed as an application-level concern
 
 ## Dates
 ```xml
+<date qualifier="APPROX">
+  <month>02</month>
+  <day>09</day>
+</date>
+```
+
+```xml
+  <date>
+    <startDate>
+      <year>1940</year>
+    </startDate>
+    <endDate>
+      <year>1949</year>
+    </endDate>
+  </date>
 ```
 
 https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consistent with date qualifiers as specified in the Metadata Open Description Schema (MODS) version 3. 
