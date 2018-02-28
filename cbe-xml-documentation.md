@@ -61,11 +61,11 @@ Each volume is represented in the data set by a `pVolume` (GA: *imleabhar*) reco
 
 Together, `pVolume` and `pPage` records represent the collection’s **physical structure** (hence the prefix `p`). In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `lPart` records and `lItem` records (notice the prefix `l`).
 
-An `lPart` record (GA: *cuid*) represents a distinct manuscript section within a volume and may have originally been physically separate from the other contents of the volume. It is consonant with the [`msPart`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the TEI P5 Guidelines. It contains a reference to a `pVolume` record to tell you which volume the manuscript part is in, and a reference to a `pPage` record within that volume that represents the manuscript part’s title page. An `lPart` record may also contain data about the location where the material was collected, the collector(s) who sourced the material, and so on.
+An `lPart` record (GA: *cuid*) represents a distinct section within a manuscript volume and may have originally been physically separate from the other contents of the volume. It is consonant with the [`msPart`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the TEI P5 Guidelines. It contains a reference to a `pVolume` record to tell you which volume the manuscript part is in, and a reference to a `pPage` record within that volume that represents the manuscript part’s title page. An `lPart` record may also contain data about the location where the material was collected, the collector(s) who sourced the material, and so on.
 
-An `lItem` (GA: *mír*) record represents a discrete individual work, such as a story or diary entry . It is consonant with the TEI [`msItem`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. It contains a reference to its parent `lPart` record and to one or more `pPage` records. Notice that mapping between items and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An `lItem` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
+An `lItem` (GA: *mír*) record represents a discrete work, such as a story or diary entry. It is consonant with the TEI [`msItem`](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. It contains a reference to its parent `lPart` record and to one or more `pPage` records. Notice that mapping between items and pages is many-to-many: a story can span over several pages and a page can accommodate several stories. An `lItem` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
 
-In addition to the physical and logical structure, several auxiliary record types exist in the data set which serve as look-up lists. These include `topic` records and `noteType` records. Their names do not have a prefix.
+In addition to the physical and logical structure, several auxiliary record types exist in the data set which serve as look-up lists. These include `person` records, `topic` records and `noteType` records. Their names do not have a prefix.
 
 Each entry in the data set consists of an ID number and an XML document of one of types mentioned above (`pVolume`, `lPart` etc). An element within an XML document may refer to another XML document with its ID number.
 
@@ -121,7 +121,7 @@ Entry ID 331620
   <image>
     <fileName>CBES_0085\CBES_0085_209.jpg</fileName>
   </image>
-  <volume id="4344035" />
+  <volume id="4344035"></volume>
   <pageNumber>209</pageNumber>
   <listingOrder>209</listingOrder>
   <condition>
@@ -130,6 +130,22 @@ Entry ID 331620
   <notes></notes>
 </pPage>
 ```
+
+### `<pPage>`
+
+Represents a scanned page.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<image>`     | exactly one   | Data relating to the scanned image file |
+| `<volume>`    | exactly one | Which volume is this page in? |
+| `<pageNumber>`| exactly one | What page number is written on this page? |
+| `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself |
+| `<condition>` | none or one | Description of the page's physical condition |
+| `<notes>`     | none or one | Internal notes |
+
 
 ## Parts
 
@@ -164,6 +180,16 @@ Entry ID 4667213
 </lPart>
 ```
 
+### `<lPart>`
+
+Represents a distinct section within a manuscript volume.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<volume>`    | exactly one   | Which volume is this part in? |
+| `<page>`      | one or more   | A reference to the manuscript part's title page (if it exists) |
 
 ## Items
 
@@ -174,7 +200,7 @@ Entry ID 551579
 ```xml
 <lItem>
   <part id="4427865">
-    <listingOrder>19</listingOrder>
+    <listingOrder>1</listingOrder>
   </part>
   <pages>
     <page id="4360522" />
@@ -222,6 +248,17 @@ Entry ID 551579
   <notes></notes>
 </lItem>
 ```
+
+### `<lItem>`
+
+Represents a discrete work within a volume or within a part of a volume.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<part>`      | exactly one   | Which part of the volume is this item in? |
+| `<pages>`     | exactly one   | Stores data about the pages associated with this item |
 
 ## Topics
 
