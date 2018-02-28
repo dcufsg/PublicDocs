@@ -95,11 +95,20 @@ Represents a volume.
 #### Child elements
 
 | Name          | Cardinality   | Description  |
-| ------------- |---------------| ------|
-| `<status>`    | exactly one   | $1600 |
-| `<volumeNumber>`     | centered      |   $12 |
-| `<notes>` | are neat      |    $1 |
+| ------------- |---------------|--------------|
+| `<status>`    | exactly one   | A status code that tells how far advanced annotation on this volume is |
+| `<volumeNumber>`| exactly one | The volume's number/code |
+| `<notes>` | none or one | Internal notes |
 
+### `<notes>`
+
+Stores internal notes.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<note>`      | one or more   | An internal note |
 
 ## Pages
 
