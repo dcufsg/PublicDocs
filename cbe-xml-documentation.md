@@ -51,7 +51,7 @@ Editorial work for CBÉS was carried out the Léacslann editorial system previou
 Various aspects of the CBÉS data structure preferred a boolean or either/or approach to certain metadata. For example, stories in CBÉS were marked as being either Irish-language, English-language, or mixed-language texts. In many cases such as this the CBÉ data structure will provide for an additive or tag-based approach where, for instance, one or many or no languages may be assigned to a given item in each volume. This is a function of both the wider scope of the CBÉ collection - which encompasses, to continue from the previous examples, some texts in Manx, Breton, and other languages, as well as non-linguistic materials - and evolving internal editorial practices.
 
 #### Additional metadata
-CBÉG Geonames etc.
+The data structure of the CBÉG collection introduced a number of new annotation options, as compared with CBÉS. These include structured references to international locations via the [Geonames](http://www.geonames.org/) API; more granular date annotations; annotations with reference to the CBÉD database (see [References to persons](#references-to-persons) below); format and other image metadata, as well as; an additional topic/subject taxonomy. It is proposed to port many of these additional metadata features to CBÉ, as well as some others that will be specific to the new collection.
 
 ### Overview of the CBÉ data structure
 
