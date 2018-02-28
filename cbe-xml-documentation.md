@@ -104,6 +104,10 @@ Represents a volume.
 
 ## Pages
 
+### Example
+
+Entry ID 331620
+
 ```xml
 <pPage>
   <image>
@@ -120,6 +124,10 @@ Represents a volume.
 ```
 
 ## Parts
+
+### Example
+
+Entry ID 4667213
 
 ```xml
 <lPart>
@@ -149,6 +157,11 @@ Represents a volume.
 
 
 ## Items
+
+### Example
+
+Entry ID 551579
+
 ```xml
 <lItem>
   <title>Scéal</title>
@@ -203,6 +216,7 @@ Represents a volume.
 ```
 
 ## Dates
+
 ```xml
 <date qualifier="INFER">
   <month>02</month>
@@ -225,6 +239,12 @@ https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consis
 
 ## References to persons
 
+Persons named within the CBÉ metadata will be identified by reference to objects in the *Persons Database* (hereafter CBÉD). Given that many persons appear in several NFC collections - some photographers in CBÉG are also collectors in CBÉ, for example - objects in CBÉD serve as a single source of truth for personal metadata across the entire data set. Persons in CBÉ metadata are referenced by their CBÉD ID, stored in a `<person>` element.
+
+The CBÉD data structure will be extended to account for the following data structure.
+
+### Example
+
 ```xml
 <person>
   <name>Seán <surname>Ó hEochaidh</surname></name>
@@ -243,12 +263,30 @@ https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consis
       <day>18</day>
     </date>
   </deathDate>
-  <occupation></occupation>
+  <occupations>
+    <occupation></occupation>
+  </occupations>
   <viaf>1740563</viaf>
   <bio>1714</bio>
   <notes></notes>
 </person>
 ```
 
+### `<person>`
+
+Represents a person.
+
+#### Child elements
+
+| Name            | Cardinality   | Description  |
+| ----------------|---------------|--------------|
+| `<name>`        | one or more   | The person's full name |
+| `<gender>`      | exactly one   | The person's gender    |
+| `<birthDate>`   | exactly one   | The person's date of birth |
+| `<deathDate>`   | exactly one   | The person's date of death |
+| `<occupations>` | none or one or more | Any occupations associated with the person |
+| `<viaf>`        | none or one   | The person's [Virtual Internation File Authority](http://viaf.org/) ID |
+| `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
+| `<notes>`       | none or one or more | Any editorial notes |
 
 ## Interoperability with CBÉS
