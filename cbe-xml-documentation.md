@@ -16,7 +16,8 @@ This collection is currently being digitsed as part of the Dúchas project by [F
 6. [Topics](#topics)  
 7. [Note types](#notetypes)  
 8. [References to persons](#references-to-persons)
-9. [Interoperability with CBÉS](#interoperability-with-cbÉs)
+9. [Dates](#dates)
+10. [Interoperability with CBÉS](#interoperability-with-cbÉs)
 
 ## Introduction 
 
@@ -158,6 +159,9 @@ and will be addressed as an application-level concern
 </lItem>
 ```
 
+## Dates
+```xml
+```
 
 ## References to persons
 
@@ -185,6 +189,6 @@ and will be addressed as an application-level concern
   <notes></notes>
 </person>
 ```
-sf
+
 
 ## Interoperability with CBÉS
