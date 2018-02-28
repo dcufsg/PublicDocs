@@ -135,12 +135,6 @@ and will be addressed as an application-level concern
     <page id="4360522" />
     <page id="4360523" />
   </pages>
-  <itemDescription type="0">
-    <script>0</script>
-    <subItem>
-      <itemDescription type="2"></itemDescription> 
-    <subItem>
-  </itemDescription>
   <date>
     <year>2002</year>
     <month>01</month>
@@ -149,6 +143,13 @@ and will be addressed as an application-level concern
   <languages>
     <language>ga</language>
   </languages>
+  <contentDescription type="0">
+    <mode>0</mode>
+    <script>0</script>
+  </contentDescription>
+  <subItem>
+    <contentDescription type="2"></contentDescription> 
+  <subItem>
   <topics></topics>
   <collectors>
     <person>80607834</person>
@@ -175,21 +176,21 @@ and will be addressed as an application-level concern
 
 ## Dates
 ```xml
-<date qualifier="APPROX">
+<date qualifier="INFER">
   <month>02</month>
   <day>09</day>
 </date>
 ```
 
 ```xml
-  <date>
-    <startDate>
-      <year>1940</year>
-    </startDate>
-    <endDate>
-      <year>1949</year>
-    </endDate>
-  </date>
+<date>
+  <startDate>
+    <year>1940</year>
+  </startDate>
+  <endDate>
+    <year>1949</year>
+  </endDate>
+</date>
 ```
 
 https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consistent with date qualifiers as specified in the Metadata Open Description Schema (MODS) version 3. 
@@ -201,7 +202,7 @@ https://www.loc.gov/standards/mods/v3/mods-userguide-generalapp.html#list consis
   <name>Seán <surname>Ó hEochaidh</surname></name>
   <gender>m</gender>
   <birthDate>
-    <date qualifier="INFER">
+    <date>
       <year>1913</year>
       <month>02</month>
       <day>09</day>
