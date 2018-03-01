@@ -125,7 +125,7 @@ Entry ID 331620
   <pageNumber>209</pageNumber>
   <listingOrder>209</listingOrder>
   <condition>
-    <conditionDesc>2</conditionDesc>
+    <conditionDescription>2</conditionDescription>
   </condition>
   <notes></notes>
 </pPage>
@@ -140,12 +140,41 @@ Represents a scanned page.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<image>`     | exactly one   | Data relating to the scanned image file |
-| `<volume>`    | exactly one | Which volume is this page in? |
-| `<pageNumber>`| exactly one | What page number is written on this page? |
+| `<volume>`    | exactly one   | Which volume is this page in? |
+| `<pageNumber>`| exactly one   | What page number is written on this page? |
 | `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself |
-| `<condition>` | none or one | Description of the page's physical condition |
-| `<notes>`     | none or one | Internal notes |
+| `<condition>` | none or one   | Description of the page's physical condition |
+| `<notes>`     | none or one   | Internal notes |
 
+### `<image>`
+
+Represents an image file and any associated image metadata.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<fileName>`  | exactly one   | The name of the image file |
+
+### `<volume>`
+
+A reference to the volume with which this page is associated.
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@id`           | required      | integer      | The ID number of a `<pVolume>` entry |
+
+### `<condition>`
+
+Represents the physical condition of the page.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<conditionDescription>` | one or more   | What is the physical condition of the page? |
 
 ## Parts
 
@@ -190,6 +219,16 @@ Represents a distinct section within a manuscript volume.
 | ------------- |---------------|--------------|
 | `<volume>`    | exactly one   | Which volume is this part in? |
 | `<page>`      | one or more   | A reference to the manuscript part's title page (if it exists) |
+
+### `<page>`
+
+A reference to the manuscript part's title page (if it exists).
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@id`           | required      | integer      | The ID number of a `<pPage>` entry |
 
 ## Items
 
