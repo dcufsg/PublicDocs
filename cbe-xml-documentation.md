@@ -97,8 +97,8 @@ Represents a volume.
 
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
-| `<status>`    | exactly one   | A status code that tells how far advanced annotation on this volume is |
 | `<volumeNumber>`| exactly one | The volume's number/code |
+| `<status>`    | exactly one   | A status code that tells how far advanced annotation on this volume is |
 | `<owner>` | one or more | The ID of a user who is charge of annotating this volume |
 | `<notes>` | none or one | Internal notes |
 
@@ -223,7 +223,7 @@ Represents a distinct section within a manuscript volume.
 | `<page>`      | one or more   | A reference to the manuscript part's title page |
 | `<languages>` | none or one   | What languages are used in the manuscript part? |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
-| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this part |
+| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this part |
 | `<collectors>`    | exactly one   | Who collected this content? |
 | `<informants>` | none or one   | Who provided this content? |
 | `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
@@ -393,8 +393,8 @@ Represents a discrete work within a volume or within a part of a volume.
 | `<languages>` | none or one   | What languages are used in the item? |
 | `<contentDescription>` | exactly one   | Represents specific properties of the item's content |
 | `<topics>`    | exactly one   | What topics describe this item's content? |
-| `<collectors>` | none or one   | Who collected this content? |
-| `<informants>` | none or one   | Who provided this content? |
+| `<collectors>` | exactly one   | Who collected this content? |
+| `<informants>` | exactly one   | Who provided this content? |
 | `<relevantPersons>` | none or one   | Stores a list of persons who are referenced within the item text or who are relevant to the item text. |
 | `<extraInfo>` | exactly one   | Additional free-form text or commentary that cannot be captured as structured data |
 | `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
