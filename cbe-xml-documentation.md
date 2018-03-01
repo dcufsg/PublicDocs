@@ -242,7 +242,7 @@ A reference to the manuscript part's title page.
 
 ### `<languages>`
 
-Stores a list of languages found within an item.
+Stores a list of languages found within particular content.
 
 #### Child elements
 
