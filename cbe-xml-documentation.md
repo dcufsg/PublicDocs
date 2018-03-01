@@ -192,7 +192,7 @@ Entry ID 4667213
   <page id="4360522"></page>
   <locationIreland>
     <county>100001</county>
-    <georefIreland>100001</georefIreland>
+    <georefIreland>103891</georefIreland>
   </locationIreland>
   <locationAbroad>
     <country>BE</country>
@@ -344,11 +344,11 @@ Entry ID 551579
     <page id="4360522" />
     <page id="4360523" />
   </pages>
-  <title>Scéal</title>
+  <title>Oíche an tSneachta Mhóir 2018</title>
   <date>
-    <year>2002</year>
-    <month>01</month>
-    <day>18</day>
+    <year>2018</year>
+    <month>03</month>
+    <day>01</day>
   </date>
   <languages>
     <language>ga</language>
