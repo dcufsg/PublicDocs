@@ -148,7 +148,7 @@ Represents a scanned page.
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this page |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this page |
 | `<condition>` | none or one   | Description of the page's physical condition |
-| `<notes>`     | none or one   | Internal notes |
+| `<notes>`     | exactly one   | Internal notes |
 
 ### `<image>`
 
@@ -249,7 +249,7 @@ Represents a distinct section within a manuscript volume.
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this part |
 | `<collectors>`    | exactly one   | Who collected this content? |
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
-| `<notes>` | none or one | Internal notes |
+| `<notes>` | exactly one | Internal notes |
 
 ### `<page>`
 
@@ -333,10 +333,10 @@ Entry ID 551579
   <informants>
     <person>80607834</person>
     <person>80607834</person>
-  </informant>
-  <relevantPerson>
+  </informants>
+  <relevantPersons>
     <person>80607834</person>
-  </relevantPerson>
+  </relevantPersons>
   <extraInfo status="EDIT">
     <text lang="ga"></text>
     <text lang="en"></text>
@@ -362,8 +362,19 @@ Represents a discrete work within a volume or within a part of a volume.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<part>`      | exactly one   | Which part of the volume is this item in? |
-| `<pages>`     | exactly one   | Stores data about the pages associated with this item |
-| `<notes>` | none or one | Internal notes |
+| `<pages>`     | exactly one   | What pages are associated with this item? |
+| `<title>`     | none or one   | The title given to the item, if it exists |
+| `<date>`      | none or one   | The date the item was recorded |
+| `<languages>` | none or one   | What languages are used in the item? |
+| `<contentDescription>` | exactly one   | Represents specific properties of the item's content |
+| `<topics>`    | exactly one   | What topics describe this item's content? |
+| `<collectors>` | none or one   | Who collected this content? |
+| `<informants>` | none or one   | Who provided this content? |
+| `<relevantPersons>` | none or one   | Stores a list of persons who are referenced within the item text or who are relevant to the item text. |
+| `<extraInfo>` | exactly one   | Additional free-form text or commentary that cannot be captured as structured data |
+| `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
+| `<relevantPublications>` | none or one   | Has the content of this manuscript part been published or discussed elsewhere? |
+| `<notes>`     | exactly one | Internal notes |
 
 ### `<part>`
 
@@ -379,7 +390,100 @@ A reference to the part with which this item is associated.
 
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
-| `@id`           | required      | integer      |  |
+| `@id`           | required      | integer      | The ID number of a `<lPart>` entry |
+
+### `<pages>`
+
+Stores a list of pages associated with an item.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<page>`      | one or more   | The ID number of a `<pPage>` entry |
+
+### `<languages>`
+
+Stores a list of languages found within an item.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<language>`      | one or more   | An ISO 639-2 language code |
+
+### `<contentDescription>`
+
+Represents specific properties of the item's content.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<mode>`      | none or one or more | Represents the writing mode, i.e. handwritten or typed |
+| `<script>`    | none or one or more | Represents the writing script, i.e. Roman or Gaelic script |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@type`         | required      | integer      | The ID number of a CBÉ content type, such as story, diary entry, questionnaire, etc. |
+
+### `<informants>`
+
+Stores a list of informants.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<person>`    | none or one or more | The ID number of a CBÉD entry |
+
+### `<relevantPersons>`
+
+Stores a list of persons who are referenced within the item text or who are relevant to the item text.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<person>`    | none or one or more | The ID number of a CBÉD entry |
+
+### `<extraInfo>`
+
+Additional free-form text or commentary that cannot be captured as structured data.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<text>`      | one or more   | Free-form text |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@status`       | required      | string       | Is this text suitable for publication? |
+
+### `<text>`
+
+Free-form text.
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@lang`         | required      | string       | An ISO 639-2 language code |
+
+### `<relevantCollections>`
+
+Stores a list of references to other NFC collections.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<collection>` | one or more   | Reference to another NFC collection |
 
 ## Topics
 
