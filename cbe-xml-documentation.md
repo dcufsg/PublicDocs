@@ -83,8 +83,9 @@ Entry ID 231579
 
 ```xml
 <pVolume>
-  <status>3</status>
   <volumeNumber>0109</volumeNumber>
+  <status>3</status>
+  <owner>26</owner>
 </pVolume>
 ```
 
@@ -98,6 +99,7 @@ Represents a volume.
 | ------------- |---------------|--------------|
 | `<status>`    | exactly one   | A status code that tells how far advanced annotation on this volume is |
 | `<volumeNumber>`| exactly one | The volume's number/code |
+| `<owner>` | one or more | The ID of a user who is charge of annotating this volume |
 | `<notes>` | none or one | Internal notes |
 
 ### `<notes>`
@@ -242,15 +244,16 @@ Represents a distinct section within a manuscript volume.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<volume>`    | exactly one   | Which volume is this part in? |
-| `<page>`      | one or more   | A reference to the manuscript part's title page (if it exists) |
+| `<page>`      | one or more   | A reference to the manuscript part's title page |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this part |
 | `<collectors>`    | exactly one   | Who collected this content? |
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
+| `<notes>` | none or one | Internal notes |
 
 ### `<page>`
 
-A reference to the manuscript part's title page (if it exists).
+A reference to the manuscript part's title page.
 
 #### Attributes
 
@@ -323,9 +326,6 @@ Entry ID 551579
     <mode>0</mode>
     <script>0</script>
   </contentDescription>
-  <subItem>
-    <contentDescription type="2"></contentDescription> 
-  <subItem>
   <topics></topics>
   <collectors>
     <person>80607834</person>
@@ -363,6 +363,23 @@ Represents a discrete work within a volume or within a part of a volume.
 | ------------- |---------------|--------------|
 | `<part>`      | exactly one   | Which part of the volume is this item in? |
 | `<pages>`     | exactly one   | Stores data about the pages associated with this item |
+| `<notes>` | none or one | Internal notes |
+
+### `<part>`
+
+A reference to the part with which this item is associated.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<listingOrder>` | one or more   | Represents a publication title |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@id`           | required      | integer      |  |
 
 ## Topics
 
