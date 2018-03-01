@@ -558,6 +558,8 @@ The CBÉD data structure will be expanded to account for the elements described 
 ```xml
 <person>
   <name>Seán <surname>Ó hEochaidh</surname></name>
+  <viaf>1740563</viaf>
+  <bio>1714</bio>
   <gender>m</gender>
   <birthDate>
     <date>
@@ -576,8 +578,6 @@ The CBÉD data structure will be expanded to account for the elements described 
   <occupations>
     <occupation id="22"></occupation>
   </occupations>
-  <viaf>1740563</viaf>
-  <bio>1714</bio>
   <notes></notes>
 </person>
 ```
@@ -591,12 +591,12 @@ Represents a person.
 | Name            | Cardinality   | Description  |
 | ----------------|---------------|--------------|
 | `<name>`        | one or more   | The person's full name. The first name in the tree will taken as the person's authoritative name |
+| `<viaf>`        | none or one   | The person's [Virtual International File Authority](http://viaf.org/) ID |
+| `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<gender>`      | exactly one   | The person's gender    |
 | `<birthDate>`   | exactly one   | The person's date of birth |
 | `<deathDate>`   | exactly one   | The person's date of death |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
-| `<viaf>`        | none or one   | The person's [Virtual International File Authority](http://viaf.org/) ID |
-| `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<notes>`       | none or one or more | Any editorial notes |
 
 ## Consistency with CBÉS data structure
