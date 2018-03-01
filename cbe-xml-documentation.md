@@ -145,8 +145,6 @@ Represents a scanned page.
 | `<volume>`    | exactly one   | Which volume is this page in? |
 | `<pageNumber>`| exactly one   | What page number is written on this page? |
 | `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself |
-| `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this page |
-| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this page |
 | `<condition>` | none or one   | Description of the page's physical condition |
 | `<notes>`     | exactly one   | Internal notes |
 
@@ -169,28 +167,6 @@ A reference to the volume with which this page is associated.
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@id`           | required      | integer      | The ID number of a `<pVolume>` entry |
-
-### `<locationIreland>`
-
-Represents a place in Ireland.
-
-#### Child elements
-
-| Name          | Cardinality   | Description  |
-| ------------- |---------------|--------------|
-| `<county>`    | exactly one   | Which county is associated with this place? (Logainm ID) |
-| `<georefIreland>`| none or one or more   | The Logainm ID associated with a particular place |
-
-### `<georefAbroad>`
-
-Represents a place outside of Ireland.
-
-#### Child elements
-
-| Name          | Cardinality   | Description  |
-| ------------- |---------------|--------------|
-| `<country>`    | exactly one   | Which country is associated with this place? (ISO 3166-1 Alpha-2 code) |
-| `<georefAbroad>`| none or one or more   | The Geonames ID associated with a particular place |
 
 ### `<condition>`
 
@@ -245,9 +221,12 @@ Represents a distinct section within a manuscript volume.
 | ------------- |---------------|--------------|
 | `<volume>`    | exactly one   | Which volume is this part in? |
 | `<page>`      | one or more   | A reference to the manuscript part's title page |
+| `<languages>` | none or one   | What languages are used in the manuscript part? |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this part |
 | `<collectors>`    | exactly one   | Who collected this content? |
+| `<informants>` | none or one   | Who provided this content? |
+| `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
 | `<notes>` | exactly one | Internal notes |
 
@@ -261,6 +240,38 @@ A reference to the manuscript part's title page.
 | ----------------|---------------|--------------|--------------|
 | `@id`           | required      | integer      | The ID number of a `<pPage>` entry |
 
+### `<languages>`
+
+Stores a list of languages found within an item.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<language>`      | one or more   | An ISO 639-2 language code |
+
+### `<locationIreland>`
+
+Represents a place in Ireland.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<county>`    | exactly one   | Which county is associated with this place? (Logainm ID) |
+| `<georefIreland>`| none or one or more   | The Logainm ID associated with a particular place |
+
+### `<georefAbroad>`
+
+Represents a place outside of Ireland.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<country>`    | exactly one   | Which country is associated with this place? (ISO 3166-1 Alpha-2 code) |
+| `<georefAbroad>`| none or one or more   | The Geonames ID associated with a particular place |
+
 ### `<collectors>`
 
 Stores a list of folklore collectors.
@@ -270,6 +281,26 @@ Stores a list of folklore collectors.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<person>`    | none or one or more | The ID number of a CBÉD entry |
+
+### `<informants>`
+
+Stores a list of informants.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<person>`    | none or one or more | The ID number of a CBÉD entry |
+
+### `<relevantCollections>`
+
+Stores a list of references to other NFC collections.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<collection>` | one or more   | Reference to another NFC collection |
 
 ### `<relevantPublications>`
 
@@ -344,12 +375,6 @@ Entry ID 551579
   <relevantCollections>
     <collection id="cbeg"></collection>
   </relevantCollections>
-  <relevantPublications>
-    <publication doi="10.2307/20521241">
-      Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." <title>Béaloideas</title> 24 (1955): Ii-133.
-    </publication>
-  </relevantPublications>
-  <notes></notes>
 </lItem>
 ```
 
@@ -402,16 +427,6 @@ Stores a list of pages associated with an item.
 | ------------- |---------------|--------------|
 | `<page>`      | one or more   | The ID number of a `<pPage>` entry |
 
-### `<languages>`
-
-Stores a list of languages found within an item.
-
-#### Child elements
-
-| Name          | Cardinality   | Description  |
-| ------------- |---------------|--------------|
-| `<language>`      | one or more   | An ISO 639-2 language code |
-
 ### `<contentDescription>`
 
 Represents specific properties of the item's content.
@@ -428,16 +443,6 @@ Represents specific properties of the item's content.
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@type`         | required      | integer      | The ID number of a CBÉ content type, such as story, diary entry, questionnaire, etc. |
-
-### `<informants>`
-
-Stores a list of informants.
-
-#### Child elements
-
-| Name          | Cardinality   | Description  |
-| ------------- |---------------|--------------|
-| `<person>`    | none or one or more | The ID number of a CBÉD entry |
 
 ### `<relevantPersons>`
 
@@ -474,16 +479,6 @@ Free-form text.
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@lang`         | required      | string       | An ISO 639-2 language code |
-
-### `<relevantCollections>`
-
-Stores a list of references to other NFC collections.
-
-#### Child elements
-
-| Name          | Cardinality   | Description  |
-| ------------- |---------------|--------------|
-| `<collection>` | one or more   | Reference to another NFC collection |
 
 ## Topics
 
