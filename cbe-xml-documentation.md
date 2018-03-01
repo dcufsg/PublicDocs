@@ -143,6 +143,8 @@ Represents a scanned page.
 | `<volume>`    | exactly one   | Which volume is this page in? |
 | `<pageNumber>`| exactly one   | What page number is written on this page? |
 | `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself |
+| `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this page |
+| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this page |
 | `<condition>` | none or one   | Description of the page's physical condition |
 | `<notes>`     | none or one   | Internal notes |
 
@@ -165,6 +167,28 @@ A reference to the volume with which this page is associated.
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@id`           | required      | integer      | The ID number of a `<pVolume>` entry |
+
+### `<locationIreland>`
+
+Represents a place in Ireland.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<county>`    | exactly one   | Which county is associated with this place? (Logainm ID) |
+| `<georefIreland>`| none or one or more   | The Logainm ID associated with a particular place |
+
+### `<georefAbroad>`
+
+Represents a place outside of Ireland.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<country>`    | exactly one   | Which country is associated with this place? (ISO 3166-1 Alpha-2 code) |
+| `<georefAbroad>`| none or one or more   | The Geonames ID associated with a particular place |
 
 ### `<condition>`
 
@@ -219,6 +243,10 @@ Represents a distinct section within a manuscript volume.
 | ------------- |---------------|--------------|
 | `<volume>`    | exactly one   | Which volume is this part in? |
 | `<page>`      | one or more   | A reference to the manuscript part's title page (if it exists) |
+| `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
+| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that isassociated with this part |
+| `<collectors>`    | exactly one   | Who collected this content? |
+| `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
 
 ### `<page>`
 
@@ -229,6 +257,43 @@ A reference to the manuscript part's title page (if it exists).
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@id`           | required      | integer      | The ID number of a `<pPage>` entry |
+
+### `<collectors>`
+
+Stores a list of folklore collectors.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<person>`    | none or one or more | The ID number of a CBÉD entry |
+
+### `<relevantPublications>`
+
+Stores a list of publications associated an entry.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<publication>` | one or more | Reference citing a publication outside of dúchas.ie |
+
+### `<publication>`
+
+Represents a publication.
+
+#### Child elements
+
+| Name          | Cardinality   | Description  |
+| ------------- |---------------|--------------|
+| `<title>`     | one or more   | Represents a publication title |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@doi`          | optional      | string       | The [digital object identifier](https://www.doi.org/) (DOI) of a publication, if available |
+| `@url`          | optional      | string       | The URL of a publication. If a DOI is available do not provide a URL. |
 
 ## Items
 
