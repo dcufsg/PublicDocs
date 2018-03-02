@@ -341,8 +341,8 @@ Entry ID 551579
     <listingOrder>1</listingOrder>
   </part>
   <pages>
-    <page id="4360522" />
-    <page id="4360523" />
+    <page id="4360522"></page>
+    <page id="4360523"></page>
   </pages>
   <title>Oíche an tSneachta Mhóir 2018</title>
   <date>
