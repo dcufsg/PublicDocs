@@ -577,7 +577,7 @@ The CBÉD data structure will be expanded to account for the elements described 
     </date>
   </deathDate>
   <occupations>
-    <occupation id="22"></occupation>
+    <occupation>22</occupation>
   </occupations>
   <notes></notes>
 </person>
