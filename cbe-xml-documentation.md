@@ -30,7 +30,7 @@ It should be noted that the data structure outlined in this document represents 
 ### Changed understandings since developing the CBÉS data structure
 
 #### Developments in relation to the storage, retrieval and dissemination of image media
-The CBÉS data structure references individual image files where each page in a volume is associated with an image:
+The CBÉS data structure references individual image files where each page in a volume is associated with a set of images at various sizes:
 
 ```xml
 <fileNameBig default="CBES_0085\CBES_0085_1A.jpg" />
