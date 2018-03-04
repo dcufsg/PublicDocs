@@ -601,6 +601,7 @@ Represents a person.
 | `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<viaf>`        | none or one   | The person's [Virtual International File Authority](http://viaf.org/) ID |
 | `<gender>`      | exactly one   | The person's gender    |
+| `<birthPlace>`  | exactly one   | The person's place of birth |
 | `<birthDate>`   | exactly one   | The person's date of birth |
 | `<deathDate>`   | exactly one   | The person's date of death |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
