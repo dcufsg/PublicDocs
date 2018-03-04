@@ -562,6 +562,12 @@ The CBÉD data structure will be expanded to account for the elements described 
   <bio>1714</bio>
   <viaf>1740563</viaf>
   <gender>m</gender>
+  <birthPlace>
+    <locationIreland>
+      <county>100013</county>
+      <georefIreland>14651</georefIreland>
+    </locationIreland>
+  </birthPlace>
   <birthDate>
     <date>
       <year>1913</year>
