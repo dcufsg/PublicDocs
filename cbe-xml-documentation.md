@@ -597,7 +597,7 @@ The CBÉD data structure will be expanded to account for the elements described 
   </address>
   <index collection="CBE">
     <collectors>
-      <person>315676427</person>
+      <collector>315676427</collector>
     </collectors>
     <volumeNumber>1706</volumeNumber>
     <startPage>207</startPage>
