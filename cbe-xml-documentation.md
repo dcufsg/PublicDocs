@@ -595,6 +595,15 @@ The CBÉD data structure will be expanded to account for the elements described 
       <text>Gort a' Choirce, Dún na nGall</text>
     </locationIreland>
   </address>
+  <index collection="CBE">
+    <collectors>
+      <person>315676427</person>
+    </collectors>
+    <volumeNumber>1706</volumeNumber>
+    <startPage>207</startPage>
+    <endPage>268</endPage>
+    <age>22</age>
+  </index>
   <occupations>
     <occupation>22</occupation>
   </occupations>
@@ -617,7 +626,7 @@ Represents a person.
 | `<birthPlace>`  | none or one   | The person's place of birth |
 | `<birthDate>`   | none or one   | The person's date of birth |
 | `<deathDate>`   | none or one   | The person's date of death |
-| `<address>`     | none or one or more | Any addresses associated with the person |
+| `<address>`     | none or one or more | A physical address associated with the person |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
 | `<notes>`       | none or one or more | Any editorial notes |
 
