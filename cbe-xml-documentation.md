@@ -600,10 +600,10 @@ Represents a person.
 | `<name>`        | one or more   | The person's full name. The first name in the tree will taken as the person's authoritative name |
 | `<bio>`         | none or one   | The person's [Ainm.ie](https://www.ainm.ie) biography ID |
 | `<viaf>`        | none or one   | The person's [Virtual International File Authority](http://viaf.org/) ID |
-| `<gender>`      | exactly one   | The person's gender    |
-| `<birthPlace>`  | exactly one   | The person's place of birth |
-| `<birthDate>`   | exactly one   | The person's date of birth |
-| `<deathDate>`   | exactly one   | The person's date of death |
+| `<gender>`      | none or one   | The person's gender |
+| `<birthPlace>`  | none or one   | The person's place of birth |
+| `<birthDate>`   | none or one   | The person's date of birth |
+| `<deathDate>`   | none or one   | The person's date of death |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
 | `<notes>`       | none or one or more | Any editorial notes |
 
