@@ -122,7 +122,7 @@ Entry ID 331620
 ```xml
 <pPage>
   <image>
-    <fileName>CBES_0085\CBES_0085_209.jpg</fileName>
+    <fileName>CBE_0085\CBE_0085_209.jpg</fileName>
   </image>
   <volume id="4344035"></volume>
   <pageNumber>209</pageNumber>
