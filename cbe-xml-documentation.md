@@ -582,6 +582,19 @@ The CBÉD data structure will be expanded to account for the elements described 
       <day>18</day>
     </date>
   </deathDate>
+  <address>
+    <locationIreland>
+      <county>100013</county>
+      <georefIreland>14651</georefIreland>
+    </locationIreland>
+  </address>
+  <address>
+    <locationIreland>
+      <county>100013</county>
+      <georefIreland>1416587</georefIreland>
+      <text>Gort a' Choirce, Dún na nGall</text>
+    </locationIreland>
+  </address>
   <occupations>
     <occupation>22</occupation>
   </occupations>
@@ -604,6 +617,7 @@ Represents a person.
 | `<birthPlace>`  | none or one   | The person's place of birth |
 | `<birthDate>`   | none or one   | The person's date of birth |
 | `<deathDate>`   | none or one   | The person's date of death |
+| `<address>`     | none or one or more | Any addresses associated with the person |
 | `<occupations>` | none or one or more | Any occupations associated with the person |
 | `<notes>`       | none or one or more | Any editorial notes |
 
