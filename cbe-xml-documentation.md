@@ -85,7 +85,8 @@ Entry ID 231579
 <pVolume>
   <volumeNumber>0109</volumeNumber>
   <status>3</status>
-  <owner>26</owner>
+  <owner task="index">26</owner>
+  <owner task="check">14</owner>
   <notes></notes>
 </pVolume>
 ```
@@ -112,6 +113,12 @@ Stores internal notes.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<note>`      | one or more   | An internal note |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@task`         | required      | string       | Denotes the editorial task assigned to the volume owner |
 
 ## Pages
 
