@@ -197,7 +197,7 @@ Entry ID 4667213
   <volume id="4360513">
     <listingOrder>2</listingOrder>
   </volume>
-  <page id="4360522"></page>
+  <startPage id="4360522"></startPage>
   <locationIreland>
     <county>100001</county>
     <georefIreland>103891</georefIreland>
@@ -228,7 +228,7 @@ Represents a distinct section within a manuscript volume.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<volume>`    | exactly one   | Which volume is this part in? |
-| `<page>`      | one or more   | A reference to the manuscript part's title page |
+| `<startPage>` | exactly one   | A reference to the manuscript part's title page or beginning page |
 | `<languages>` | none or one   | What languages are used in the manuscript part? |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this part |
