@@ -152,7 +152,11 @@ Represents a scanned page.
 | `<image>`     | exactly one   | Data relating to the scanned image file |
 | `<volume>`    | exactly one   | Which volume is this page in? |
 | `<pageNumber>`| exactly one   | What page number is written on this page? |
-| `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself |
+| `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself || `<languages>` | none or one   | What languages are used in the manuscript part? |
+| `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this page |
+| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this page |
+| `<collectors>`    | none or one   | Who collected the content on this page? |
+| `<informants>` | none or one   | Who provided the content on this page? |
 | `<condition>` | none or one   | Description of the page's physical condition |
 | `<notes>`     | exactly one   | Internal notes |
 
