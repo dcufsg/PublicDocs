@@ -365,9 +365,9 @@ Entry ID 551579
   <languages>
     <language>ga</language>
   </languages>
-  <contentDescription type="0">
+  <contentDescription type="SEAN">
     <mode>0</mode>
-    <script>0</script>
+    <script>LATG</script>
   </contentDescription>
   <topics></topics>
   <collectors>
@@ -450,7 +450,7 @@ Represents specific properties of the item's content.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<mode>`      | none or one or more | Represents the writing mode, i.e. handwritten or typed |
-| `<script>`    | none or one or more | Represents the writing script, i.e. Roman or Gaelic script |
+| `<script>`    | none or one or more | Represents the writing script, i.e. Roman or Gaelic script, according to the ISO 15924 standard |
 
 #### Attributes
 
