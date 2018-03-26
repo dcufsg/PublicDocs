@@ -232,7 +232,7 @@ Represents a distinct section within a manuscript volume.
 | `<languages>` | none or one   | What languages are used in the manuscript part? |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this part |
-| `<collectors>`    | exactly one   | Who collected this content? |
+| `<collectors>`    | none or one   | Who collected this content? |
 | `<informants>` | none or one   | Who provided this content? |
 | `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
