@@ -216,7 +216,7 @@ Entry ID 4667213
   <relevantPublications>
     <publication doi="10.2307/20521241">
       Ó Broin, Tomás. "Scéalaí Tíre: Bailiúchán Seanchais ó Ghaillimh." 
-      <title>Béaloideas</title> 24 (1955): Ii-133.
+      <pubTitle>Béaloideas</pubTitle> 24 (1955): Ii-133.
     </publication>
   </relevantPublications>
   <notes></notes>
@@ -332,7 +332,7 @@ Represents a publication.
 
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
-| `<title>`     | one or more   | Represents a publication title |
+| `<pubTitle>`     | one or more   | Represents a publication title |
 
 #### Attributes
 
