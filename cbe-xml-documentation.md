@@ -401,6 +401,8 @@ Represents a discrete work within a volume or within a part of a volume.
 | `<languages>` | none or one   | What languages are used in the item? |
 | `<contentDescription>` | exactly one   | Represents specific properties of the item's content |
 | `<topics>`    | exactly one   | What topics describe this item's content? |
+| `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this part |
+| `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this part |
 | `<collectors>` | exactly one   | Who collected this content? |
 | `<informants>` | exactly one   | Who provided this content? |
 | `<relevantPersons>` | none or one   | Stores a list of persons who are referenced within the item text or who are relevant to the item text. |
