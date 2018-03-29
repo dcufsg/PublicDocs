@@ -73,7 +73,17 @@ Each record type is described in detail below.
 
 ### Relationships of inheritance within volumes
 
-In many cases where, for example, all of the parts in a volume were collected in a single location or many of the items in a manuscript part were obtained by the same collector, it may be beneficial to allow `lPart` or `lItem` records to 'inherit' certain metadata from the volume or part, respectively, to which they belong. Such a facility may be an aid to the progress of the editorial annotation work. Relationships of inheritance, as such, will not be explicitly defined within the data structure. That is to say, there will not be an element that explicitly defines an 'Item X inherits collector properties from Volume Y'-type relationship. Rather, relationships of inheritance will be facilitated within the editorial tooling as an application-level concern.
+In many cases where, for example, all of the parts in a volume were collected in a single location or many of the items in a manuscript part were obtained by the same collector, it may be beneficial to allow `lPart` or `lItem` records to 'inherit' certain metadata from part to which they belong. Such an approach may be an aid to the progress of the editorial annotation work. Relationships of inheritance, as such, are *implicitly* defined within the data structure and are facilitated within the editorial tooling as an application-level concern. For these purposes, the application will assume that pages inherit certain metadata from the items to which they are linked; items are deemed to inherit certain metadata from their parent manuscript part. The following metadata are inheritable (defined below):
+
+- `<locationIreland>`
+- `<locationAbroad>`
+- `<collectors>`
+- `<informants>`
+- `<relevantPersons>`
+- `<relevantCollections>`
+- `<relevantPublications>`
+
+It is necessary to provide for edge cases where, for example, one story in a long series of manuscript items was collected by a person other than the collectors associated with the parent part. Obviously, instances such as this must not be understood to inherit factually incorrect metadata. Various approaches were considered to cater for such scenarios.
 
 ## Volumes
 
