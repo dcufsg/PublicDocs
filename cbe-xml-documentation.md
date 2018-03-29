@@ -80,6 +80,7 @@ In many cases where, for example, all of the parts in a volume were collected in
 - `<relevantPersons>`
 - `<relevantCollections>`
 - `<relevantPublications>`
+- `@type=blank` (in the case of `<lPart>` elements)
 
 It is necessary to provide for edge cases where, for example, one story in a long series of manuscript items was collected by a person other than the collectors associated with the parent part. Obviously, instances such as this must not be understood to inherit factually incorrect metadata. To this end, an `<override>` element can be placed in either `<lItem>` or `<pPage>` documents. An `<override>` element denotes that a particular property (named in an element attribute) should *not* be inherited from any parent document. This has the disadvantage of introducing what is a non-descriptive or negating element to an otherwise entirely descriptive data structure, but it was deemed to be the least brittle approach and allows for maximum flexibility in terms of future ammendments to the schema.
 
