@@ -153,12 +153,19 @@ Represents a scanned page.
 | `<volume>`    | exactly one   | Which volume is this page in? |
 | `<pageNumber>`| exactly one   | What page number is written on this page? |
 | `<listingOrder>` | exactly one | What is the listing order of this page in this volume? This is often, but not always, identical to the page number as written on the page itself || `<languages>` | none or one   | What languages are used in the manuscript part? |
+| `<override>`  | none or one or more | Indicates that a property normally inherited from a `<lPart>` or `<lItem>` element should not be applied to the current page  |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this page |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this page |
 | `<collectors>`    | none or one   | Who collected the content on this page? |
 | `<informants>` | none or one   | Who provided the content on this page? |
 | `<condition>` | none or one   | Description of the page's physical condition |
 | `<notes>`     | exactly one   | Internal notes |
+
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@type`         | none or one   | string       | Denotes whether a page is blank or not |
 
 ### `<image>`
 
@@ -404,6 +411,7 @@ Represents a discrete work within a volume or within a part of a volume.
 | `<date>`      | none or one   | The date the item was recorded |
 | `<languages>` | none or one   | What languages are used in the item? |
 | `<contentDescription>` | exactly one   | Represents specific properties of the item's content |
+| `<override>`  | none or one or more | Indicates that a property normally inherited from a `<lPart>` element should not be applied to the current item or its associated pages  |
 | `<topics>`    | exactly one   | What topics describe this item's content? |
 | `<locationIreland>` | none or one or more | Represents a place in Ireland that is associated with this item |
 | `<locationAbroad>` | none or one or more | Represents a place outside of Ireland that is associated with this item |
