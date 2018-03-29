@@ -257,6 +257,12 @@ Represents a distinct section within a manuscript volume.
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
 | `<notes>` | exactly one | Internal notes |
 
+#### Attributes
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@type`         | none or one   | string       | Denotes whether a manuscript is blank or not |
+
 ### `<page>`
 
 A reference to the manuscript part's title page.
