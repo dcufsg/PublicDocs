@@ -4,8 +4,6 @@ The *Main Manuscript Collection* is one of five major collections of folklore he
 
 This collection is currently being digitsed as part of the Dúchas project by [Fiontar & Scoil na Gaeilge](http://www.dcu.ie/fiontar_scoilnagaeilge/) (FSG), Dublin City University (DCU), in conjunction with the NFC. The digitisation will produce (1) a collection of scanned images and (2) an XML data set that indexes and annotates the images. This document describes the data structure used in the XML data set.
 
-**Note:** This documentation is a work in progress and should be treated as such.
-
 ## Table of Contents  
 
 1. [Introduction](#introduction)  
@@ -83,7 +81,7 @@ In many cases where, for example, all of the parts in a volume were collected in
 - `<relevantCollections>`
 - `<relevantPublications>`
 
-It is necessary to provide for edge cases where, for example, one story in a long series of manuscript items was collected by a person other than the collectors associated with the parent part. Obviously, instances such as this must not be understood to inherit factually incorrect metadata. Various approaches were considered to cater for such scenarios.
+It is necessary to provide for edge cases where, for example, one story in a long series of manuscript items was collected by a person other than the collectors associated with the parent part. Obviously, instances such as this must not be understood to inherit factually incorrect metadata. To this end, an `<override>` element can be placed in either `<lItem>` or `<pPage>` documents. An `<override>` element denotes that a particular property (named in an element attribute) should *not* be inherited from any parent document. This has the disadvantage of introducing what is a non-descriptive or negating element to an otherwise entirely descriptive data structure, but it was deemed to be the least brittle approach and allows for maximum flexibility in terms of future ammendments to the schema.
 
 ## Volumes
 
