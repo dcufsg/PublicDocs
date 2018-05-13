@@ -169,12 +169,6 @@ Represents a scanned page.
 | `<condition>` | none or one   | Description of the page's physical condition |
 | `<notes>`     | exactly one   | Internal notes |
 
-#### Attributes
-
-| Name            | Optionality   | Value type   | Description  |
-| ----------------|---------------|--------------|--------------|
-| `@type`         | none or one   | string       | Denotes whether a page is blank or not |
-
 ### `<image>`
 
 Represents an image file and any associated image metadata.
@@ -256,12 +250,6 @@ Represents a distinct section within a manuscript volume.
 | `<relevantCollections>` | none or one   | Are any other NFC collections referenced by this content? |
 | `<relevantPublications>` | none or one | Has the content of this manuscript part been published or discussed elsewhere? |
 | `<notes>` | exactly one | Internal notes |
-
-#### Attributes
-
-| Name            | Optionality   | Value type   | Description  |
-| ----------------|---------------|--------------|--------------|
-| `@type`         | none or one   | string       | Denotes whether a manuscript is blank or not |
 
 ### `<page>`
 
@@ -387,7 +375,7 @@ Entry ID 551579
     <language>ga</language>
   </languages>
   <contentDescription type="SEAN">
-    <mode>0</mode>
+    <mode>LÁMH</mode>
     <script>LATG</script>
   </contentDescription>
   <topics></topics>
@@ -478,7 +466,7 @@ Represents specific properties of the item's content.
 
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
-| `@type`         | required      | integer      | The ID number of a CBÉ content type, such as story, diary entry, questionnaire, etc. |
+| `@type`         | required      | string       | Denotes a CBÉ content type, such as story, diary entry, questionnaire, etc. |
 
 ### `<relevantPersons>`
 
