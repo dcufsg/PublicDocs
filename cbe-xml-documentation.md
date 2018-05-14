@@ -460,8 +460,8 @@ Represents a linked item.
 
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
-| `@sequence`     | none or one   | string       | Defines a sequential relationship with the current `<lItem>` |
 | `@id`           | required      | integer      | The ID number of the linked item |
+| `@sequence`     | none or one   | string       | Defines a sequential relationship with the current `<lItem>` |
 
 ### `<contentDescription>`
 
