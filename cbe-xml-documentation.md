@@ -410,6 +410,7 @@ Represents a discrete work within a volume or within a part of a volume.
 | `<part>`      | exactly one   | Which part of the volume is this item in? |
 | `<pages>`     | exactly one   | What pages are associated with this item? |
 | `<title>`     | none or one   | The title given to the item, if it exists |
+| `<item>`      | none or one or more | Is this item linked to another item, i.e. is it part of a series of items such as a story spread over several volumes? |
 | `<date>`      | none or one   | The date the item was recorded |
 | `<languages>` | none or one   | What languages are used in the item? |
 | `<contentDescription>` | exactly one   | Represents specific properties of the item's content |
@@ -450,6 +451,15 @@ Stores a list of pages associated with an item.
 | Name          | Cardinality   | Description  |
 | ------------- |---------------|--------------|
 | `<page>`      | one or more   | The ID number of a `<pPage>` entry |
+
+### `<item>`
+
+Represents a linked item.
+
+| Name            | Optionality   | Value type   | Description  |
+| ----------------|---------------|--------------|--------------|
+| `@sequence`     | none or one   | string       | Defines a sequential relationship with the current `<lItem>` |
+| `@id`           | required      | integer      | The ID number of the linked item |
 
 ### `<contentDescription>`
 
