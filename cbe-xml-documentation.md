@@ -456,6 +456,8 @@ Stores a list of pages associated with an item.
 
 Represents a linked item.
 
+#### Attributes
+
 | Name            | Optionality   | Value type   | Description  |
 | ----------------|---------------|--------------|--------------|
 | `@sequence`     | none or one   | string       | Defines a sequential relationship with the current `<lItem>` |
